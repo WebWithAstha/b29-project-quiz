@@ -71,7 +71,6 @@ function addEventOnOption() {
       }
 
       currentQIndex++;
-      console.log(currentQIndex);
 
       if (currentQIndex === quizQuestions.length) {
         displayScoreBoard();
@@ -86,7 +85,7 @@ function addEventOnOption() {
 function displayScoreBoard() {
   qna.style.display = "none";
   scoreBoard.style.display = "flex";
-  scoreBoard.innerHTML += `
+  scoreBoard.innerHTML = `
      <div id="feedback">
     <h1 class="font-medium text-xl italic">${
       score < 2 ? "Oops" : score == 2 ? "You were close" : "Hurray"
